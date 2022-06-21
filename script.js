@@ -61,7 +61,7 @@ async function foo(){
            
                 var tex2 = document.getElementById("output");
                 tex2.innerHTML= 
-                ` ${res1.name} <br>
+                ` Name :  ${res1.name} <br>
                 ${res1.country[0].country_id} <br>
                  probability  ${res1.country[0].probability}
                   ${res1.country[1].country_id} <br>
