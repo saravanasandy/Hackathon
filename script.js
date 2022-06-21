@@ -51,6 +51,7 @@ async function foo(){
         let res1 = await res.json();
         console.log(res1);
         console.log(res1.name);
+        if(res1.country.length>0){
         console.log(res1.country);
         console.log(res1.country[0].country_id);
         console.log(res1.country[0].probability);
@@ -61,12 +62,16 @@ async function foo(){
            
                 var tex2 = document.getElementById("output");
                 tex2.innerHTML= 
-                ` Name :  ${res1.name} <br>
+                ` ${res1.name} <br>
                 ${res1.country[0].country_id} <br>
                  probability  ${res1.country[0].probability}
                   ${res1.country[1].country_id} <br>
                    probability  ${res1.country[1].probability} `;   
-    
+        }else{
+            var tex2 = document.getElementById("output");
+                tex2.innerHTML= "";
+                
+        }
     }
     catch (error){
          console.log(error);
